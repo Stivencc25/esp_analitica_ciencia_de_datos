@@ -1,1 +1,9 @@
+En primer lugar, se procede a realizar la búsqueda de la base de datos, se halla que un modelo de churn puede generar valor a nivel organizativo específicamente para empresas de telecomunicaciones para ser más proactivos en su proceso de fidelización.
+
+Se comparte notebook donde se realizan los siguiente pasos siguiendo el Crisp-dm:
+
+Entendimiento, (darse cuenta que para la organización X es más costoso adquirir clientes nuevos que perderlos)
+Visualización y posibles variables predictoras
+tratamiento de datos, como min max scaler, acompañado de diferentes iteraciones usando oversampling (sobre la población de entrenamiento) y tuneando hiperparametros.
+conclusiones sobre el mejor modelo.
 
