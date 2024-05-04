@@ -1,9 +1,46 @@
-En primer lugar, se procede a realizar la búsqueda de la base de datos, se halla que un modelo de churn puede generar valor a nivel organizativo específicamente para empresas de telecomunicaciones para ser más proactivos en su proceso de fidelización.
+# Análisis de Churn en Telecomunicaciones
 
-Se comparte notebook donde se realizan los siguiente pasos siguiendo el Crisp-dm:
+Este proyecto aplica técnicas de ciencia de datos para predecir la deserción de clientes en una empresa de telecomunicaciones, utilizando la metodología CRISP-DM. El objetivo es permitir a la organización ser más proactiva en sus esfuerzos de fidelización de clientes, considerando que adquirir nuevos clientes es más costoso que retener los existentes.
 
-Entendimiento, (darse cuenta que para la organización X es más costoso adquirir clientes nuevos que perderlos)
-Visualización y posibles variables predictoras
-tratamiento de datos, como min max scaler, acompañado de diferentes iteraciones usando oversampling (sobre la población de entrenamiento) y tuneando hiperparametros.
-conclusiones sobre el mejor modelo.
+## 1. Entendimiento del Negocio
 
+El análisis parte del entendimiento de que para la organización "X", es fundamental mejorar la retención de clientes dado el alto costo de adquisición de nuevos clientes. Este proyecto busca identificar los factores que contribuyen a la deserción de clientes y ofrecer insights para desarrollar estrategias efectivas de retención.
+
+## 2. Entendimiento de los Datos
+
+Se realiza una exploración y visualización inicial de los datos para comprender mejor las características del dataset, la distribución de las variables y las posibles relaciones entre ellas. Este paso es crucial para identificar las variables predictoras relevantes para el modelo de churn.
+
+## 3. Preparación de los Datos
+
+### Limpieza de Datos
+Se abordan problemas comunes como valores faltantes y errores de formato en el dataset. La limpieza de datos asegura que el modelado sea preciso y relevante.
+
+### Escalado de Datos
+Utilizamos técnicas como Min-Max Scaler para normalizar los rangos de las variables numéricas, lo que es esencial para algunos algoritmos de aprendizaje automático que asumen datos en la misma escala.
+
+### Manejo de Desbalanceo de Clases
+Aplicamos técnicas de oversampling, específicamente SMOTE, sólo en el conjunto de entrenamiento para evitar el sesgo en la predicción y mejorar la capacidad del modelo de identificar la clase minoritaria (clientes que abandonan).
+
+## 4. Modelado
+
+Se prueban varios modelos y se ajustan los hiperparámetros mediante técnicas como búsqueda en cuadrícula y validación cruzada. El enfoque es seleccionar el modelo que ofrezca el mejor equilibrio entre precisión y capacidad de generalización.
+
+## 5. Evaluación
+
+Evaluamos los modelos basándonos en métricas como la precisión, recall, F1-score y AUC-ROC. Este paso es crucial para seleccionar el modelo más eficaz para implementar en un entorno de producción.
+
+## 6. Despliegue
+
+El modelo seleccionado se prepara para el despliegue para que pueda ser utilizado por los stakeholders. Se planifica una integración con los sistemas existentes para aplicar las predicciones del modelo en las operaciones diarias de la empresa.
+
+## 7. Conclusiones
+
+Resumimos los hallazgos clave, incluyendo las variables más predictivas de churn y las recomendaciones para estrategias de retención de clientes. Se discuten las limitaciones del estudio actual y se sugieren direcciones para investigaciones futuras.
+
+## Cómo Usar
+
+Este notebook está diseñado para ser ejecutado de principio a fin en un entorno Jupyter Notebook/Lab. Asegúrate de ajustar los paths de los archivos de datos y configurar adecuadamente el entorno de ejecución.
+
+---
+
+Este README proporciona una visión general estructurada y clara del proyecto y puede ser utilizado tanto para usuarios técnicos como para stakeholders no técnicos interesados en entender y aplicar los resultados del análisis.
